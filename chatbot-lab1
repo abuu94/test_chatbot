@@ -1,0 +1,33 @@
+Objectives
+In this lab you will perform the following tasks:
+
+Build a conversational agent for a fictional pizza shop that will let users place orders
+
+Define intents for a pizza-ordering use case to match typical user queries
+
+Identify entities to extract data from user queries
+
+Steps:
+
+1. Click Open Google Console. 
+
+2. Enable Google API (Dialogflow API,Cloud Natural Language API)
+
+3. Click Open Dialogflow Console.
+
+4.Login by Google Student Account
+
+5. Create your first Dialogflow agent
+
+6. Choose Project ID Provide by Qwicklabs, Make sure you are in the right Project, Create agent
+
+7.Create your first intent and Entities.
+
+8.Map the parameters in your intent to the entities 
+
+Follow up the Coursera Course :
+
+https://www.coursera.org/programs/a1b9a3cb-041f-48dc-9548-1db4d77eb4f4
+
+
+
