@@ -1,0 +1,18 @@
+Enable API's:
+Compute Engine API
+Dialogflow API
+Cloud Storage
+Cloud Source Repositories API
+Cloud Natural Language API
+
+You'll use a NoSQL database called Cloud Datastore to store content extracted from the document.
+To enable Cloud Datastore, enable the associated App Engine service.
+
+Get started with Cloud Datalab:
+Pre-Processing Notebooks;
+
+ProcessHandbook.ipynb performs "semi-structured" analysis on the HR Manual text file. It alternately extracts topic "headings" and associated "policy text" from the file and stores these as key-value pairs in Cloud Datastore to give the chatbot a basic vocabulary.
+
+ProcessSynonyms.ipynb uses several Python data science libraries and the Cloud Natural Language API to generate synonyms for topics, which gives the chatbot an expanded vocabulary.
+
+DialogFlow.ipynb uses Dialogflow's "Entity" API to write the topics to Dialogflow's Entity module, which makes these words available to the chatbot as a data type.
