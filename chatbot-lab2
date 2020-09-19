@@ -1,0 +1,47 @@
+in this we will enable USE 3 API's:
+1)Dialogflow API
+2)Cloud Source Repositories API
+3)Cloud Natural Language API
+
+Create an agent eg pizzaBot
+From lab1 , we created an agent and exported it, now here we import it and build it more
+
+Import your Dialogflow agent:
+Click on the settings gear icon next to your agent name.
+Select the Export and Import tab.
+Click IMPORT FROM ZIP.
+Click SELECT FILE and navigate to the zip file which contains the configuration of your virtual agent. You can alternatively drag and drop the file if you prefer.
+Type in the word "IMPORT" in all caps to enable the import button and click IMPORT.
+Click DONE to close out the upload window once the import is complete.
+Your existing configuration has been imported into your new agent project.
+
+Add follow-up intents with input and output contexts:
+Click on Intents in the left menu to display the list of intents in your agent.
+Click on your order.pizza intent and change the default response
+Click the Save button.
+Go back to your list of intents, hover your mouse (not click) over the order.pizza intent, and you will notice Add follow-up intent message on the right.
+Click on the order.pizza - yes and look at the training phrases. Some typical phrases have already been added. Feel free to add few more such as, I sure would like a drink.
+
+In the Responses section, add a default response to say something like, Great, what would you like ?
+Click Save.
+
+Task 6: Setup fulfillment using Cloud Functions to push order entries into Datastore
+
+Click on Fulfillment in the left menu. It may take a few minutes for the resources to be provisioned.
+
+Next to the Inline Editor option, slide the slider to the right so it appears ENABLED. This enables the Cloud Functions editor within your Dialogflow agent. Note: if you receive an error message, try refreshing the page and then try enabling the slider again.
+Once enabled, you will notice a default template in index.js.
+
+Click on the package.json tab and notice the name of the function (already provided as default).
+
+Scroll down to dependencies and add the following line as the first entry in that section:
+Click on the Deploy button on the bottom right. This may take a few minutes.
+
+Once deployment is successful, go into your GCP console, and using the menu on the left, navigate into Cloud Functions to confirm if the function has been deployed (look for the name you noticed in step 4.
+
+Back in the Fulfillment section of your Dialogflow console, click on the index.js tab.
+
+Again notice that there is already some starter code, including functions to handle the default welcome and fallback intents. You will first add the following lines below to be able to work with Datastore. Add them after the line that says:
+
+
+// See https://github.com/dialogflow/dialogflow-fulfillment-nodejs
