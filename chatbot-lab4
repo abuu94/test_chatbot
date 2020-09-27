@@ -7,3 +7,39 @@ What you'll learn to do:
 1)Use Cloud Datalab, Python, data science libraries, and Google Natural Language API machine learning technology to transform an unstructured text document into a structured knowledge base in Cloud Datastore
 2)Use Dialogflow to build a conversational agent that can respond to questions about the HR manual
 3)Populate entities from Datastore into your Dialogflow agent
+
+
+The following API's will be used:
+Compute Engine API,Dialogflow API,Cloud Storage,Cloud Source Repositories API,Cloud Natural Language API
+
+Steps: 
+Tasl 2:Initialize App Engine and Cloud Datastore
+You'll use a NoSQL database called Cloud Datastore to store content extracted from the document. 
+To enable Cloud Datastore, enable the associated App Engine service.
+
+Task 3. Get started with Cloud Datalab
+Pre-Processing Notebooks:They are used to extract information from the HR Manual and create a knowledge base that is used by the chatbot to answer questions.
+Each of them will be run one time in the order listed here:
+ProcessHandbook.ipynb,ProcessSynonyms.ipynb,DialogFlow.ipynb
+
+Set up Cloud Datalab:
+gcloud config set core/project $GOOGLE_CLOUD_PROJECT
+gcloud compute zones list 
+(Notice the output from running this command is in the format zone, region, then status (Zone | Region | Status).)
+datalab create mydatalabvm --zone <ZONE> (Replace <ZONE> with the zone name you picked from the previous step.)
+If the command prompts you to create SSH keys, type Y.
+If the command prompts you for an RSA key password, press ENTER twice to confirm.
+
+(Note: The connection from the Cloud Shell to the Datalab instance can time out due to inactivity. If you lose connection, you may be able to restore it as follows. Find the instance name from the drop down menu Compute Engine > VM Instances, then enter the command: datalab connect mydatalabvm in your new Cloud Shell.)
+
+%bash
+git clone https://github.com/GoogleCloudPlatform/training-data-analyst
+rm -rf training-data-analyst/.git
+
+training-data-analyst > courses > dialogflow-chatbot > notebooks > CAHRC_HR_Manual.txt
+
+Task 4. Open and execute the ProcessHandbook notebook
+Task 6. Login to Dialogflow
+Task 7. Create a Dialogflow chatbot (Agent)
+Task 8. Create a "Topic" entity
+NB:Clear / uncheck Define synonyms. Your webhook handles synonyms instead.
