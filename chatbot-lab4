@@ -1,0 +1,9 @@
+In this HR chatbot series of labs, you build a chatbot in three steps. 
+In this first lab, you extract the content from a document to create a knowledge base, which the chatbot uses to converse with your users about topics found in the knowledge base.
+This lab uses a Human Resources Manual as the example document.
+However, this use case can be applied to any type of document: an operations manual, an instruction manual, a policy document, etc.
+
+What you'll learn to do:
+1)Use Cloud Datalab, Python, data science libraries, and Google Natural Language API machine learning technology to transform an unstructured text document into a structured knowledge base in Cloud Datastore
+2)Use Dialogflow to build a conversational agent that can respond to questions about the HR manual
+3)Populate entities from Datastore into your Dialogflow agent
